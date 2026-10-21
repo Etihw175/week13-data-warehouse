@@ -23,7 +23,7 @@
 
 ### B1 โครงสร้าง Star Schema
 
-![Star Schema](star_schema.png)
+![star_schema.png](results/star_schema.png)
 
 ตาราง fact คือ fact_sales ส่วน dimension ได้แก่ customers, products, dim_date และ dim_channel คีย์ที่ใช้เชื่อมคือ customer_id, product_id, order_date และ channel
 
@@ -59,6 +59,38 @@ mart_monthly_sales สรุปรายได้รายเดือนตา�
 - Features: recency_days, frequency, monetary, segment, province
 - การประเมิน: ดู silhouette score ความต่างของ monetary และ frequency ระหว่างกลุ่ม และตรวจว่ากลุ่มที่ได้มีความหมายทางธุรกิจหรือไม่
 - Data leakage: ถ้าสร้าง features จากยอดขายที่เกิดหลังจุดที่ต้องการทำนาย ผลจะดูดีเกินจริง จึงต้องแยกช่วงเวลาของ feature กับ label ให้ชัดเจน
+
+## ภาพผลลัพธ์จากการรัน query
+
+ภาพด้านล่างเป็นผลลัพธ์จากการรัน 67160175.sql บน DuckDB แสดงไม่เกิน 12 แถวต่อภาพ ไฟล์ภาพอยู่ในโฟลเดอร์ results
+
+![A1.png](results/A1.png)
+
+![A2.png](results/A2.png)
+
+![A3.png](results/A3.png)
+
+![A4.png](results/A4.png)
+
+![A5.png](results/A5.png)
+
+![A6.png](results/A6.png)
+
+![A7.png](results/A7.png)
+
+![A8.png](results/A8.png)
+
+![B2_mart.png](results/B2_mart.png)
+
+![B3_missing_customer.png](results/B3_missing_customer.png)
+
+![B3_quantity.png](results/B3_quantity.png)
+
+![B3_missing_product.png](results/B3_missing_product.png)
+
+![C1.png](results/C1.png)
+
+![C2.png](results/C2.png)
 
 ## ส่วน D: Executive Insight
 
